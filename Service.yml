@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: service
+metadata:
+  name: lb 
+spec:
+  selector:
+    deploy: app 
+  type: LoadBalancer
+  ports: 
+  - port: 80
+    targetPort: 8080  
+  
